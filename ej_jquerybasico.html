@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Ejemplo</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .container {
+      max-width: 600px;
+      margin-top: 50px;
+      text-align: center;
+    }
+    .title {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+    .image-container img {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title text-primary">¡Mirá la siguiente imagen!</h1>
+    
+    <div class="btn-container">
+      <button id="hideBtn" class="btn btn-danger">Ocultar Imagen</button>
+      <button id="showBtn" class="btn btn-success">Mostrar Imagen</button>
+    </div>
+
+    <div class="image-container">
+      <img id="landscapeImage" src="Generate_an_image_of_a_vibrant_natural_landscape_w.png" alt="Paisaje" class="img-fluid">
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#hideBtn').click(function() {
+        $('#landscapeImage').hide();
+        $('.title').text('¡No tenemos ninguna imagen!');
+      });
+      $('#showBtn').click(function() {
+        $('#landscapeImage').show();
+        $('.title').text('¡Mirá la siguiente imagen!');
+      });
+    });
+  </script>
+</body>
+</html>
